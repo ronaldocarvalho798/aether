@@ -28,11 +28,11 @@
     margin: 0 auto; /* <--- MUDEI (Substitui 'left' e 'transform') */
 
     /* 4. O Efeito "Glassmorfismo" (Seu código, mantido) */
-    background: rgba(84, 84, 84, 0.25); 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.311);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.123);
+    background: #e72c710f; 
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.181);
     border-radius: 50px;
 }
 
@@ -53,7 +53,7 @@
 /* --- Os Links (A) --- */
 .glass-header ul li a {
     text-decoration: none;
-    color: #ffffff; /* Cor do texto padrão (branco) */
+    color: #000000b9; /* Cor do texto padrão (branco) */
     font-size: 1rem;
     font-weight: 500;
     padding: 12px 25px; /* Área de clique */
@@ -65,15 +65,15 @@
 
 /* --- O Botão Ativo (O PONTO-CHAVE) --- */
 .glass-header ul li a.active {
-    background-color: #ffffff; /* Fundo branco, como você pediu */
-    color: #000000;            /* Texto preto, como você pediu */
+    background-color: #e72c71; /* Fundo branco, como você pediu */
+    color: #FFFFFF; /* Texto preto, como você pediu */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* --- Efeito Hover (Opcional, mas recomendado) --- */
 .glass-header ul li a:not(.active):hover {
     /* Um leve fundo para links não-ativos ao passar o mouse */
-    background-color: rgba(255, 255, 255, 0.2);
+    color: #e72c71;
 }
 
 
