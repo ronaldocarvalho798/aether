@@ -6,10 +6,14 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-     font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 a{
