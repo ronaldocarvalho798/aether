@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,26 +13,33 @@
     <link rel="stylesheet" href="/css/particles.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/portfolio.css"> </head>
 </head>
 <body>
 
-
+    <!-- Background Particles -->
     <div id="particles-js">
     </div>
-      
-    <div id="home" class="logo-container">
-        <img src="/imgs/aetherlogo.png" alt="">
-    </div>
-
-    <nav class="glass-header">
-          <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#brands">Identidade Visual</a></li>
-                <li><a href="#social">Social Media</a></li>
-                <li><a href="#contato">Contato</a></li>
-          </ul>  
-    </nav>
     
+    <!-- HEADER (LOGO + NAV MENU) -->
+    <header id="home">
+        <div class="logo-container">
+            <a href="#home">
+                <img src="/imgs/aetherlogo.png" alt="">
+            </a>
+        </div>
+        <nav class="glass-header">
+              <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#brands">Identidade Visual</a></li>
+                    <li><a href="#social">Social Media</a></li>
+                    <li><a href="#contato">Contato</a></li>
+              </ul>
+        </nav>
+    </header>
+    
+
+    <!-- MAIN -->
     <main>
         <div class="maintitle">
             <h1 class="title">O Prisma da sua <br> Identidade Visual</h1>
@@ -42,13 +49,94 @@
             <a class="cta" href="#brands">
                 Conheça nossos projetos
             </a>
+
+            <div class="container-arrow">
+                <img class="down-arrow" src="/imgs/down-arrow.png" alt="">
+            </div>
         </div>
     </main>
 
+    <!-- Identidade Visuais -->
+    <section id="brands" class="portfolio-showcase">
+    
+    <h2 class="section-title">Nossos Projetos de Identidade Visual</h2>
 
+    <article class="project-slide">
+        
+        <div class="project-content">
+
+            <div class="project-visuals">
+                <img src="/imgs/portfoliomaha.png" alt="Logo Maha Graphic Designer"> 
+                </div>
+
+            <div cla class="project-description">
+                <h3>Maha Graphic Designer</h3>
+                <p class="category">Branding & Identidade Visual</p>
+                
+                <h4>O Conceito</h4>
+                <p>Aqui você escreve o texto sobre o conceito do projeto, o desafio do cliente e a solução que vocês criaram.</p>
+                
+                <h4>Construção</h4>
+                <p>A paleta de cores (Redwood, Midnight Green) foi escolhida para... e a tipografia (Gumanti e Cocogoose Pro) traz um ar de...</p>
+
+                <div class="color-palette">
+    
+                    <div class="color-swatch">
+                        <div class="color-circle" style="background-color: #AE4253;"></div>
+                        <strong class="color-name">REDWOOD</strong>
+                        <span class="color-code">RGB: 174, 66, 83</span>
+                        <span class="color-code">HEX: #AE4253</span>
+                    </div>
+
+                    <div class="color-swatch">
+                        <div class="color-circle" style="background-color: #053C3F;"></div>
+                        <strong class="color-name">MIDNIGHT GREEN</strong>
+                        <span class="color-code">RGB: 5, 60, 63</span>
+                        <span class="color-code">HEX: #053C3F</span>
+                    </div>
+
+                    <div class="color-swatch">
+                        <div class="color-circle" style="background-color: #D2B9BD;"></div>
+                        <strong class="color-name">TEA ROSE</strong>
+                        <span class="color-code">RGB: 210, 185, 189</span>
+                        <span class="color-code">HEX: #D2B9BD</span>
+                    </div>
+
+                    <div class="color-swatch">
+                        <div class="color-circle" style="border: 2px solid #000000;"></div>
+                        <strong class="color-name">ALABASTER</strong>
+                        <span class="color-code">RGB: 241, 233, 220</span>
+                        <span class="color-code">HEX: #F1E9DC</span>
+                    </div>
+
+                </div>
+
+                <a href="#" class="cta-outline">Ver projeto completo</a>
+            </div>
+
+        </div> </article>
+
+
+    <article class="project-slide inverted"> 
+        
+        <div class="project-content">
+            <div class="project-description">
+                <h3>Próximo Cliente</h3>
+                <p class="category">Social Media</p>
+                </div>
+
+            <div class="project-visuals">
+                <img src="/imgs/projetos/outro-projeto.jpg" alt="Outro Projeto"> 
+            </div>
+        </div>
+
+    </article>
+
+</section>
 
   <script src="/js/particles.js"></script>
   <script src="/js/settparticle.js"></script>
   <script src="/js/header.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
