@@ -36,6 +36,16 @@ main{
 }
 }
 
+@keyframes degradey {
+    0% {
+    background-position-y: 0%;
+}
+
+100% {
+    background-position-y: 200%;
+}
+}
+
 
 
 
@@ -61,4 +71,31 @@ main{
         transform: translateY(-3px);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
+}
+
+
+.container-arrow{
+  margin-top: 70px;
+  opacity: 1;
+  transition: opacity 0.6s ease-out;
+}
+
+
+.down-arrow {
+  animation: bounce 2s infinite;
+  width: 40px; 
+  height: 40px;
+}
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px); 
+  }
+  60% {
+    transform: translateY(5px); 
+  }
 }
