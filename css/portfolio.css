@@ -1,0 +1,207 @@
+/* =============================
+   SEÇÃO PORTFOLIO (AGORA COM A IDENTIDADE AETHER)
+   ============================= */
+
+/* 1. O Contêiner da Seção Inteira */
+.portfolio-showcase {
+    width: 100%;
+    /* REMOVE QUALQUER COR DE FUNDO 
+      para deixar o #particles-js aparecer. 
+    */
+    background-color: transparent; 
+}
+
+/* 2. O Título da Seção (ESTILIZADO) */
+.section-title {
+    font-size: 2.5rem; /* Tamanho (ajuste como preferir) */
+    text-align: center;
+    padding: 6rem 0 4rem 0;
+    
+    /* USANDO O MESMO GRADIENTE DA HOME 
+      (Ajuste as cores se necessário para bater 100%)
+    */
+    background: linear-gradient(to right, #FF8C42, #E53573, #8A2BE2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 800; 
+}
+
+/* 3. O "Slide" do Projeto */
+.project-slide {
+    width: 100%;
+    padding: 4rem 0rem; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* FUNDO TRANSPARENTE */
+    background-color: transparent; 
+}
+
+/* Remove a cor de fundo alternada */
+.project-slide:nth-child(even) {
+    background-color: transparent;
+}
+
+
+/* 4. O CARD "GLASS" (A MÁGICA ESTÁ AQUI) */
+.project-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem; 
+    width: 100%;
+    max-width: 1200px; 
+    
+    /* EFEITO "GLASS" (copie do seu .glass-header se for diferente)
+    */
+    background: #f1e9dc7b; /* Fundo branco bem sutil */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 16px; /* Cantos arredondados */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    
+    /* Espaçamento DENTRO do card de vidro */
+    padding: 2rem 2rem;
+}
+
+/* 5. Imagem do Projeto */
+.project-visuals img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Cantos arredondados na imagem */
+}
+
+/* 6. Textos da Descrição (COR CLARA) */
+.project-description {
+    color: #555; /* Cor de texto principal (cinza-claro) */
+}
+
+.project-description h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #333; /* Título do projeto em branco puro */
+}
+
+.project-description .category {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #E53573; /* O ROSA da sua marca */
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.project-description h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    color: #333;
+}
+
+.project-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* 7. Link "Ver projeto" (ESTILIZADO) */
+.project-description a {
+    display: inline-block; /* Para o padding funcionar */
+    text-decoration: none;
+    font-weight: 600;
+    color: #E53573; /* Cor rosa */
+    border: 2px solid #E53573; /* Borda rosa */
+    padding: 10px 24px;
+    border-radius: 50px; /* Botão "pílula" */
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.project-description a:hover {
+    background-color: #E53573;
+    color: #ffffff;
+}
+
+
+/* 8. A Inversão (Classe .inverted no HTML) */
+.project-slide.inverted .project-visuals {
+    order: 2;
+}
+.project-slide.inverted .project-description {
+    order: 1;
+}
+
+
+/* =============================
+   PALETA DE CORES DO PROJETO
+   ============================= */
+
+/* 1. O contêiner da paleta */
+.color-palette {
+    display: flex; /* Coloca os blocos de cor lado a lado */
+    flex-wrap: wrap; /* Permite quebrar a linha em telas pequenas */
+    gap: .3rem;
+    padding: 1rem 0;
+    margin-top: 1.5rem; /* Espaço acima da paleta */
+    margin-bottom: 2rem; /* Espaço abaixo da paleta */
+}
+
+.color-palette{
+    background-color: #F1E9DC;
+    border-radius: 50px;
+}
+
+/* 2. O bloco de uma cor individual */
+.color-swatch {
+    display: flex;
+    flex-direction: column; /* Organiza (círculo, nome, rgb) verticalmente */
+    align-items: center; /* Centraliza tudo */
+    flex: 1; /* Faz com que todos os blocos tentem ter o mesmo tamanho */
+    min-width: 100px; /* Largura mínima antes de quebrar a linha */
+}
+
+/* 3. O círculo da cor */
+.color-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Faz o círculo */
+    margin-bottom: 0.75rem; /* Espaço entre o círculo e o nome */
+}
+
+/* 4. Os textos (Nome e Códigos) */
+.color-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #333; /* Cor escura (como corrigimos antes) */
+    text-transform: uppercase;
+}
+
+.color-code {
+    font-size: 0.8rem;
+    color: #777; /* Cinza um pouco mais claro para os códigos */
+    line-height: 1.4;
+}
+
+
+/* 9. RESPONSIVIDADE (Importante!) */
+@media (max-width: 900px) { /* Ponto de quebra um pouco maior */
+    .project-content {
+        /* As colunas 50/50 agora viram 100% */
+        grid-template-columns: 1fr; /* Coluna única */
+        gap: 2rem;
+        padding: 2rem; /* Menos padding no celular */
+    }
+
+    .project-slide {
+        padding: 3rem 1.5rem;
+    }
+
+    .project-slide.inverted .project-visuals,
+    .project-slide.inverted .project-description {
+        order: initial;
+    }
+}
