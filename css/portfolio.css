@@ -1,25 +1,16 @@
-/* =============================
-   SEÇÃO PORTFOLIO (AGORA COM A IDENTIDADE AETHER)
-   ============================= */
 
-/* 1. O Contêiner da Seção Inteira */
+
+
 .portfolio-showcase {
     width: 100%;
-    /* REMOVE QUALQUER COR DE FUNDO 
-      para deixar o #particles-js aparecer. 
-    */
     background-color: transparent; 
 }
 
-/* 2. O Título da Seção (ESTILIZADO) */
+
 .section-title {
-    font-size: 2.5rem; /* Tamanho (ajuste como preferir) */
+    font-size: 2.5rem; 
     text-align: center;
     padding: 6rem 0 4rem 0;
-    
-    /* USANDO O MESMO GRADIENTE DA HOME 
-      (Ajuste as cores se necessário para bater 100%)
-    */
     background: linear-gradient(to right, #FF8C42, #E53573, #8A2BE2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -28,7 +19,7 @@
     font-weight: 800; 
 }
 
-/* 3. O "Slide" do Projeto */
+
 .project-slide {
     width: 100%;
     padding: 4rem 0rem; 
@@ -37,17 +28,16 @@
     justify-content: center;
     align-items: center;
     
-    /* FUNDO TRANSPARENTE */
+
     background-color: transparent; 
 }
 
-/* Remove a cor de fundo alternada */
 .project-slide:nth-child(even) {
     background-color: transparent;
 }
 
 
-/* 4. O CARD "GLASS" (A MÁGICA ESTÁ AQUI) */
+
 .project-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -56,41 +46,39 @@
     width: 100%;
     max-width: 1200px; 
     
-    /* EFEITO "GLASS" (copie do seu .glass-header se for diferente)
-    */
-    background: #f1e9dc7b; /* Fundo branco bem sutil */
+    background: #f1e9dc7b; 
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border-radius: 16px; /* Cantos arredondados */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    border-radius: 16px; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     
-    /* Espaçamento DENTRO do card de vidro */
+
     padding: 2rem 2rem;
 }
 
-/* 5. Imagem do Projeto */
+
 .project-visuals img {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* Cantos arredondados na imagem */
+    border-radius: 8px; 
 }
 
-/* 6. Textos da Descrição (COR CLARA) */
+
 .project-description {
-    color: #555; /* Cor de texto principal (cinza-claro) */
+    color: #555; 
 }
 
 .project-description h3 {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #333; /* Título do projeto em branco puro */
+    color: #333; 
 }
 
 .project-description .category {
     font-size: 1rem;
     font-weight: 600;
-    color: #E53573; /* O ROSA da sua marca */
+    color: #E53573; 
     margin-bottom: 1.5rem;
     text-transform: uppercase;
 }
@@ -108,15 +96,15 @@
     margin-bottom: 1rem;
 }
 
-/* 7. Link "Ver projeto" (ESTILIZADO) */
+
 .project-description a {
-    display: inline-block; /* Para o padding funcionar */
+    display: inline-block; 
     text-decoration: none;
     font-weight: 600;
-    color: #E53573; /* Cor rosa */
-    border: 2px solid #E53573; /* Borda rosa */
+    color: #E53573; 
+    border: 2px solid #E53573;
     padding: 10px 24px;
-    border-radius: 50px; /* Botão "pílula" */
+    border-radius: 50px; 
     margin-top: 1rem;
     transition: all 0.3s ease;
 }
@@ -127,7 +115,6 @@
 }
 
 
-/* 8. A Inversão (Classe .inverted no HTML) */
 .project-slide.inverted .project-visuals {
     order: 2;
 }
@@ -136,18 +123,14 @@
 }
 
 
-/* =============================
-   PALETA DE CORES DO PROJETO
-   ============================= */
 
-/* 1. O contêiner da paleta */
 .color-palette {
-    display: flex; /* Coloca os blocos de cor lado a lado */
-    flex-wrap: wrap; /* Permite quebrar a linha em telas pequenas */
+    display: flex; 
+    flex-wrap: wrap; 
     gap: .3rem;
     padding: 1rem 0;
-    margin-top: 1.5rem; /* Espaço acima da paleta */
-    margin-bottom: 2rem; /* Espaço abaixo da paleta */
+    margin-top: 1.5rem; 
+    margin-bottom: 2rem; 
 }
 
 .color-palette{
@@ -155,45 +138,97 @@
     border-radius: 50px;
 }
 
-/* 2. O bloco de uma cor individual */
+
 .color-swatch {
     display: flex;
-    flex-direction: column; /* Organiza (círculo, nome, rgb) verticalmente */
-    align-items: center; /* Centraliza tudo */
-    flex: 1; /* Faz com que todos os blocos tentem ter o mesmo tamanho */
-    min-width: 100px; /* Largura mínima antes de quebrar a linha */
+    flex-direction: column; 
+    align-items: center; 
+    flex: 1; 
+    min-width: 100px; 
 }
 
-/* 3. O círculo da cor */
+
 .color-circle {
     width: 80px;
     height: 80px;
-    border-radius: 50%; /* Faz o círculo */
-    margin-bottom: 0.75rem; /* Espaço entre o círculo e o nome */
+    border-radius: 50%;
+    margin-bottom: 0.75rem; 
 }
 
-/* 4. Os textos (Nome e Códigos) */
+
 .color-name {
     font-size: 0.9rem;
     font-weight: 700;
-    color: #333; /* Cor escura (como corrigimos antes) */
+    color: #333; 
     text-transform: uppercase;
 }
 
 .color-code {
     font-size: 0.8rem;
-    color: #777; /* Cinza um pouco mais claro para os códigos */
+    color: #777; 
     line-height: 1.4;
 }
 
+.grid-aplic {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "quadradom quadradom quadradoum"
+      "quadradom quadradom quadradodois"
+      "quadrado3 retangulo retangulo"; 
 
-/* 9. RESPONSIVIDADE (Importante!) */
-@media (max-width: 900px) { /* Ponto de quebra um pouco maior */
+    gap: 10px;
+    width: 100%; 
+    height: 500px;
+}
+
+
+
+        .item {
+            display: grid;
+            place-items: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            font-family: sans-serif;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+
+
+        .item-a {
+          grid-area: quadradom;
+          background-color: #FFB6C1;
+        }
+
+        .item-b {
+          grid-area: quadradoum;
+          background-color: #ADD8E6; 
+        }
+
+        .item-c {
+          grid-area: quadradodois;
+          background-color: #90EE90; 
+        }
+
+        .item-d {
+          grid-area: quadrado3;
+          background-color: #eeee91; 
+        }
+        
+        .item-e {
+          grid-area: retangulo;
+          background-color: #b075f8; 
+        }
+
+
+@media (max-width: 900px) {
     .project-content {
-        /* As colunas 50/50 agora viram 100% */
-        grid-template-columns: 1fr; /* Coluna única */
+
+        grid-template-columns: 1fr; 
         gap: 2rem;
-        padding: 2rem; /* Menos padding no celular */
+        padding: 2rem; 
     }
 
     .project-slide {

@@ -10,24 +10,22 @@
     width: 250px;
 }
 
-/* --- O HEADER (Onde a mágica acontece) --- */
-/* --- O HEADER (Ajustado para o Sticky Correto) --- */
-.glass-header {
-    /* 1. COMPORTAMENTO STICKY */
-    position: sticky;
-    top: 5px; /* <--- MUDEI DE 25px PARA 0 (para travar no topo) */
 
-    /* 2. Suas personalizações (Mantidas) */
+.glass-header {
+  
+    position: sticky;
+    top: 5px; 
+
+
     width: max-content;
     display: flex;
     gap: 2rem;
     padding: 14px 2px;
     z-index: 10;
     
-    /* 3. Centralização Correta para Sticky */
-    margin: 0 auto; /* <--- MUDEI (Substitui 'left' e 'transform') */
 
-    /* 4. O Efeito "Glassmorfismo" (Seu código, mantido) */
+    margin: 0 auto; 
+
     background: #e72c710f; 
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
@@ -36,48 +34,43 @@
     border-radius: 50px;
 }
 
-/* O RESTO DO SEU CSS (.glass-header ul, a, .active, .content, etc.) 
-  ESTÁ PERFEITO. NÃO PRECISA MUDAR MAIS NADA.
-*/
 
-/* --- A Lista de Links (UL) --- */
+
 .glass-header ul {
-    list-style: none; /* Remove bolinhas */
+    list-style: none; 
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around; /* Distribui os links igualmente */
+    justify-content: space-around; 
     align-items: center;
 }
 
-/* --- Os Links (A) --- */
+
 .glass-header ul li a {
     text-decoration: none;
-    color: #000000b9; /* Cor do texto padrão (branco) */
+    color: #000000b9; 
     font-size: 1rem;
     font-weight: 500;
-    padding: 12px 25px; /* Área de clique */
-    border-radius: 30px; /* Borda para o "botão" ativo */
+    padding: 12px 25px; 
+    border-radius: 30px; 
     
-    /* Transição suave para a troca de cor */
+
     transition: all 0.3s ease-in-out;
 }
 
-/* --- O Botão Ativo (O PONTO-CHAVE) --- */
+
 .glass-header ul li a.active {
-    background-color: #e72c71; /* Fundo branco, como você pediu */
-    color: #FFFFFF; /* Texto preto, como você pediu */
+    background-color: #e72c71; 
+    color: #FFFFFF; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* --- Efeito Hover (Opcional, mas recomendado) --- */
+
 .glass-header ul li a:not(.active):hover {
-    /* Um leve fundo para links não-ativos ao passar o mouse */
     color: #e72c71;
 }
 
 
-/* --- Conteúdo de Fundo (Apenas para demo) --- */
 .content {
     color: white;
     text-align: center;
