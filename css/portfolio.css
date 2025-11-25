@@ -46,12 +46,14 @@
     width: 100%;
     max-width: 1200px; 
     
-    background: #f1e9dc7b; 
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 16px; 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fbfbfb;
+
+    background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+    background-size: 20px 20px; 
+
+    border-radius: 30px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     
 
     padding: 2rem 2rem;
@@ -133,12 +135,6 @@
     margin-bottom: 2rem; 
 }
 
-.color-palette{
-    background-color: #F1E9DC;
-    border-radius: 50px;
-}
-
-
 .color-swatch {
     display: flex;
     flex-direction: column; 
@@ -179,7 +175,7 @@
       "quadrado3 retangulo retangulo"; 
 
     gap: 10px;
-    width: 100%; 
+    width: 150%; 
     height: 500px;
 }
 
@@ -199,27 +195,37 @@
 
         .item-a {
           grid-area: quadradom;
-          background-color: #FFB6C1;
+          background-image: url(/imgs/maha1.png);
+          background-position: center;
+          background-size: cover;
         }
 
         .item-b {
           grid-area: quadradoum;
-          background-color: #ADD8E6; 
+          background-image: url(/imgs/portfoliomaha.png);
+          background-position: center;
+          background-size: cover;
         }
 
         .item-c {
           grid-area: quadradodois;
-          background-color: #90EE90; 
+          background-image: url(/imgs/image.png);
+          background-position: center;
+          background-size: cover;
         }
 
         .item-d {
           grid-area: quadrado3;
-          background-color: #eeee91; 
+          background-image: url(/imgs/image.png);
+          background-position: center;
+          background-size: cover; 
         }
         
         .item-e {
           grid-area: retangulo;
-          background-color: #b075f8; 
+          background-image: url(/imgs/mahah.png);
+          background-position: center;
+          background-size: cover;
         }
 
 
