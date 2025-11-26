@@ -1,0 +1,186 @@
+
+/* --- Estilos Originais (Mantidos) --- */
+.element {
+    background-image: url(/imgs/1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    transition: .7s ease-in-out;
+    cursor: pointer;
+    border-radius: calc(0.05 * 50vh);
+}
+
+.impar {
+    background-image: url(/imgs/2.png);
+}
+
+.grid .column:first-child .column-scroller .element{
+    background-image: url(/imgs/3.png);
+}
+
+.grid .column:last-child .column-scroller .element{
+     background-image: url(/imgs/3.png);;
+}
+
+/* --- Estrutura do Grid (Modificada) --- */
+.grid {
+    display: grid;  
+    /* Agora definimos 4 colunas fixas. 
+      Não usamos mais auto-fill.
+    */
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem; /* Este é o gap HORIZONTAL entre as colunas */
+    justify-content: center;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Container de cada coluna (estática) 
+  Usamos flexbox para criar o gap VERTICAL
+*/
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Gap VERTICAL entre os itens */
+}
+
+
+/* --- MÁGICA DA ANIMAÇÃO --- */
+
+/* 1. A "Máscara" 
+   Este container esconde o conteúdo que transborda.
+*/
+.scroll-column-mask {
+    /* Precisamos definir uma altura fixa para o overflow funcionar.
+      Altura = (4 itens * 150px) + (3 gaps * 1.5rem)
+      1.5rem = 24px (assumindo 1rem = 16px)
+      Altura = (600px) + (3 * 24px) = 600 + 72 = 672px
+    */
+    height: calc( (22vh * 4) + (1.3rem * 3) );
+    overflow: hidden;
+    
+    /* Melhora a performance da animação em alguns navegadores */
+    mask-image: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 0.026) 0%, 
+        black 10%, 
+        black 90%, 
+        rgba(0, 0, 0, 0.026) 100%
+    );
+}
+
+/* 2. O "Rolo" 
+   Este é o container que se move.
+   Ele tem o dobro da altura (8 itens + 7 gaps).
+*/
+.column-scroller {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    
+    /* Aplica a animação 'scroll-up'
+       Duração: 10 segundos
+       Velocidade: linear (constante)
+       Repetição: infinite (infinita)
+    */
+    animation: scroll-up 17s linear infinite;
+}
+
+.down{
+    animation: scroll-down 17s linear infinite;
+}
+
+
+/* --- ANIMAÇÃO DO MARQUEE (BARRA SUPERIOR) --- */
+
+.markelement {
+    /* IMPORTANTE: Remova 'justify-content' dos seus estilos inline.
+       width: max-content; faz o container ser exatamente
+       largo o suficiente para todo o conteúdo (original + duplicado).
+    */
+    width: max-content;    
+    gap: 2.1rem; 
+    
+    padding-left: 2rem;
+
+    animation: scroll-horizontal 22s linear infinite;
+}
+
+/* Garante que os itens não sejam "espremidos" */
+.markelement p,
+.markelement img {
+    flex-shrink: 0;
+}
+
+/* --- Definição da Animação --- */
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Move o container para a esquerda em 50% de sua largura total.
+           Como o conteúdo é duplicado (200%), mover -50% faz
+           a cópia 2 terminar exatamente onde a cópia 1 começou.
+        */
+        transform: translateX(-50%);
+    }
+}
+
+.markelement p{
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    font-size: 27px;
+    margin: 0;
+}
+
+.markelement img{
+    width: 20px;
+    height: 20px;
+}
+
+.column-scroller:hover{
+    animation-play-state: paused;
+}
+
+.column-scroller:hover .element:not(:hover){
+    filter: blur(5px);
+}
+
+
+/* 3. A Animação (Keyframes) */
+@keyframes scroll-up {
+    /* Posição inicial (sem mover) */
+    0% {
+        transform: translateY(0);
+    }
+
+    /* Posição final */
+    100% {
+        /* Move para cima exatamente 50% da sua própria altura.
+          Como ele tem o conteúdo duplicado (200% da altura visível),
+          mover -50% faz a cópia (item 2) terminar exatamente
+          onde o original (item 1) começou, criando um loop perfeito.
+        */
+        transform: translateY( calc( -1 * ( (50vh * 4) + (1.3rem * 4) ) ) );
+    }
+}
+
+
+@keyframes scroll-down {
+    /* Posição inicial (sem mover) */
+    0% {
+        transform: translateY( calc( -1 * ( (50vh * 4) + (1.3rem * 4) ) ) );
+    }
+
+    /* Posição final */
+    100% {
+        /* Move para cima exatamente 50% da sua própria altura.
+          Como ele tem o conteúdo duplicado (200% da altura visível),
+          mover -50% faz a cópia (item 2) terminar exatamente
+          onde o original (item 1) começou, criando um loop perfeito.
+        */
+        transform: translateY(0px);
+    }
+}

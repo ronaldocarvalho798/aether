@@ -1,0 +1,44 @@
+.horizontal-scroll-container {
+    overflow: hidden; 
+    position: relative;
+}
+
+.horizontal-content {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: fit-content;
+    gap: 10px; 
+    transform: translateX(30vw); 
+    will-change: transform; 
+}
+
+
+.slide {
+  padding: 0 20px; 
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slide img {
+  width: 20vw; 
+  height: 25vw;
+  object-fit: cover; 
+  border-radius: 10px; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.vertical-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
