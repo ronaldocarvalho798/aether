@@ -39,24 +39,43 @@
 
 
 .project-content {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 3rem; 
     width: 100%;
     max-width: 1200px; 
-    
     background-color: #fbfbfb;
-
-    background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
-    background-size: 20px 20px; 
-
     border-radius: 30px;
     border: 1px solid #eaeaea;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     
 
     padding: 2rem 2rem;
+}
+
+.project-content::before {
+    content: ""; /* Obrigatório para o pseudo-elemento aparecer */
+    
+    /* 2. Posiciona a camada em relação ao .container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* 3. Define a imagem e a opacidade */
+    background-image: url('/imgs/andrew-kliatskyi-HHK2xGa6vJo-unsplash.jpg');
+    background-size: cover; /* Ajusta a imagem para cobrir tudo */
+    background-position: center;
+    border-radius: 30px;
+    filter: contrast(1.3) brightness(1) invert(2);
+    opacity: .4; /* Ajuste aqui a transparência (0.1 a 1.0) */
+    
+    /* 4. Joga essa camada para trás do texto */
+    z-index: -1;
 }
 
 
