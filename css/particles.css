@@ -1,16 +1,8 @@
-/* O container do particles.js */
-    #particles-js {
-      position: fixed; /* Fica fixo na tela */
-      width: 100%;
-      height: 100%;
+  #vanta-bg {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
       top: 0;
       left: 0;
-      
-      /* IMPORTANTE: Coloca o fundo atrás de todo o resto */
       z-index: -1;
-      
-      /* Você pode adicionar uma imagem de fundo se quiser */
-      /* background-image: url('sua-imagem.jpg'); */
-      background-size: cover;
-      background-position: 50% 50%;
     }

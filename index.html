@@ -21,7 +21,7 @@
 <body>
 
     <!-- Background Particles -->
-    <div id="particles-js">
+    <div id="vanta-bg">
     </div>
     
     <!-- HEADER (LOGO + NAV MENU) -->
@@ -287,7 +287,30 @@
     <!-- Fim Grid Roll -->
 
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
 
+  <script>
+    VANTA.FOG({
+      el: "#vanta-bg", // ID da div que criamos lá em cima
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      
+      // AQUI SÃO AS CORES (Ajustei para lembrar sua marca)
+      highlightColor: 0x8A3CFF, // Rosa Magenta (Destaque)
+      midtoneColor: 0x37F2D8,   // Laranja (Tom médio)
+      lowlightColor: 0xFF3DAE,  // Cinza bem claro (Sombras)
+      baseColor: 0xFFFFFF,      // Branco (Base)
+      
+      blurFactor: 0.8, // Quanto mais alto, mais difuso/suave
+      speed: 1.90,     // Velocidade da movimentação
+      zoom: 0.45
+    })
+  </script>
   <script src="/js/particles.js"></script>
   <script src="/js/settparticle.js"></script>
   <script src="/js/header.js"></script>

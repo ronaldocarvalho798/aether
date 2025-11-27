@@ -60,14 +60,14 @@
 
 
 .glass-header ul li a.active {
-    background-color: #e72c71; 
+    background-color: #000000; 
     color: #FFFFFF; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 
 .glass-header ul li a:not(.active):hover {
-    color: #e72c71;
+    color: #ffffff;
 }
 
 
