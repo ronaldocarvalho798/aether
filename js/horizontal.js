@@ -38,3 +38,25 @@ ScrollTrigger.create({
     // a animação horizontal termina e a página continua a rolagem normal.
     end: () => `+=${scrollDistance}`
 });
+
+
+// 1. Seleciona o elemento que queremos manipular
+    const navBar = document.querySelector('.glass-header');
+
+    // 3. Função que verifica a posição de rolagem
+    function checkScroll() {
+        // window.scrollY retorna quantos pixels a página foi rolada verticalmente
+        if (window.scrollY >= window.innerHeight / 2) {
+            // Se rolou mais do que 100vh, aplica a classe de topo
+            navBar.classList.add('top');
+        } else {
+            // Se está de volta ao topo da página, remove a classe
+            navBar.classList.remove('top');
+        }
+    }
+
+    // 4. Atribui a função ao evento de rolagem
+    window.addEventListener('scroll', checkScroll);
+    
+    // Opcional: Executa a verificação na inicialização da página (para recargas)
+    checkScroll();

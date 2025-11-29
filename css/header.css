@@ -1,7 +1,17 @@
+.hero-container{
+    height: 100vh;
+}
+
+/* 1. HEADER (Logo) */
+header#home {
+    width: 100%; 
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-180px); 
+}
+
 
 .logo-container{
-    position: relative;
-    z-index: 100;
     display: flex;
     justify-content: center;
     padding: 10px 0;
@@ -12,13 +22,14 @@
 
 
 .glass-header {
-    position: sticky;
-    top: 5px; 
+    position: fixed; 
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
     width: max-content;
-    display: flex;
     gap: 2rem;
     padding: 14px 2px;
-    z-index: 10;
     margin: 0 auto; 
     background: #ffffff3a; 
     backdrop-filter: blur(10px);
@@ -26,8 +37,16 @@
     border: 1px solid rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.181);
     border-radius: 50px;
+    transition: top .8s ease-out, transform .8s ease-out;
 }
 
+/* O seu .glass-header.top CORRIGIDO */
+.glass-header.top {
+    /* position: fixed; é redundante, mas não atrapalha */
+    position: fixed; 
+    top: 5px; /* Sobrescreve o top: 50% */
+    /* Mantenha o transform: translateX(-50%); para manter a centralização horizontal */
+}
 
 
 .glass-header ul {
