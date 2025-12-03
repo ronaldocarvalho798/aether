@@ -60,3 +60,7 @@ ScrollTrigger.create({
     
     // Opcional: Executa a verificação na inicialização da página (para recargas)
     checkScroll();
+
+
+
+    

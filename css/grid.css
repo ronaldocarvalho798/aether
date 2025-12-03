@@ -1,7 +1,7 @@
 
 /* --- Estilos Originais (Mantidos) --- */
 .element {
-    background-image: url(/imgs/1.png);
+    background-image: url(/imgs/um.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,15 +12,15 @@
 }
 
 .impar {
-    background-image: url(/imgs/2.png);
+    background-image: url(/imgs/dois.webp);
 }
 
 .grid .column:first-child .column-scroller .element{
-    background-image: url(/imgs/3.png);
+    background-image: url(/imgs/tres.webp);
 }
 
 .grid .column:last-child .column-scroller .element{
-     background-image: url(/imgs/3.png);;
+     background-image: url(/imgs/tres.webp);
 }
 
 /* --- Estrutura do Grid (Modificada) --- */
