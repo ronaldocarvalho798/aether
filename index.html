@@ -4,31 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aether</title>
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/portfolio.css" />
     <link rel="stylesheet" href="/css/grid.css" />
     <link rel="stylesheet" href="/css/horizontal.css" />
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-    
-    <script src="/js/header.js" defer></script>
-    <script src="/js/main.js" defer></script>
-    <script src="/js/horizontal.js" defer></script>
   </head>
-  
   <body>
+    <!-- Background Particles -->
     <div id="vanta-bg"></div>
 
     <header id="home">
@@ -50,14 +42,33 @@
 
     <div class="hero-container"></div>
 
+    <!-- MAIN -->
+    <!-- <main>
+        <div class="maintitle">
+            <h1 class="title">O Prisma da sua <br> Identidade Visual</h1>
+            <p class="subtitle">
+                Somos a Aether, um estúdio de design focado em criar identidades visuais autênticas que conectam marcas ao seu público.
+            </p>
+            <a class="cta" href="#brands">
+                Conheça nossos projetos
+            </a>
+
+            <div class="container-arrow">
+                <img class="down-arrow" src="/imgs/down-arrow.png" alt="">
+            </div>
+        </div>
+    </main> -->
+
+    <!-- Identidade Visuais -->
     <section id="brands" class="portfolio-showcase">
       <h2 class="section-title">Nossos Projetos de Identidade Visual</h2>
 
       <article class="project-slide">
         <div class="project-content">
-          <div class="project-description">
+          <div cla class="project-description">
             <h3>Maha Graphic Designer</h3>
             <p class="category">Branding & Identidade Visual</p>
+
             <h4>O Conceito</h4>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
@@ -75,20 +86,56 @@
 
             <div class="color-palette">
               <div class="color-swatch">
-                <div class="color-circle" style="background-color: #ae4253"></div>
+                <div
+                  class="color-circle"
+                  style="background-color: #ae4253"
+                ></div>
                 <strong class="color-name">REDWOOD</strong>
                 <span class="color-code">RGB: 174, 66, 83</span>
                 <span class="color-code">HEX: #AE4253</span>
               </div>
+
+              <div class="color-swatch">
+                <div
+                  class="color-circle"
+                  style="background-color: #053c3f"
+                ></div>
+                <strong class="color-name">MIDNIGHT GREEN</strong>
+                <span class="color-code">RGB: 5, 60, 63</span>
+                <span class="color-code">HEX: #053C3F</span>
               </div>
+
+              <div class="color-swatch">
+                <div
+                  class="color-circle"
+                  style="background-color: #d2b9bd"
+                ></div>
+                <strong class="color-name">TEA ROSE</strong>
+                <span class="color-code">RGB: 210, 185, 189</span>
+                <span class="color-code">HEX: #D2B9BD</span>
+              </div>
+
+              <div class="color-swatch">
+                <div
+                  class="color-circle"
+                  style="background-color: #f1e9dc"
+                ></div>
+                <strong class="color-name">ALABASTER</strong>
+                <span class="color-code">RGB: 241, 233, 220</span>
+                <span class="color-code">HEX: #F1E9DC</span>
+              </div>
+            </div>
 
             <a href="#" class="cta-outline">Ver projeto completo</a>
           </div>
           <div class="project-visuals">
-            <img src="/imgs/portfoliomaha.png" alt="Logo Maha Graphic Designer" />
+            <img
+              src="/imgs/portfoliomaha.png"
+              alt="Logo Maha Graphic Designer"
+            />
           </div>
           <div class="grid-aplic">
-             <div class="item item-a"></div>
+            <div class="item item-a"></div>
             <div class="item item-b"></div>
             <div class="item item-c"></div>
             <div class="item item-d"></div>
@@ -103,51 +150,189 @@
             <h3>Próximo Cliente</h3>
             <p class="category">Social Media</p>
           </div>
+
           <div class="project-visuals">
             <img style="width: 50px" src="/imgs/um.webp" alt="Outro projeto" />
           </div>
         </div>
       </article>
     </section>
+    <!-- FIM Identidade Visuais -->
+
+    <!-- Inicio Scroll Vertical -->
 
     <section class="horizontal-scroll-container">
       <div class="horizontal-content">
-        <div class="slide"><img src="/imgs/um.webp" alt="Imagem 1" /></div>
-        <div class="slide"><img src="/imgs/dois.webp" alt="Imagem 2" /></div>
-        <div class="slide"><img src="/imgs/tres.webp" alt="Imagem 3" /></div>
-        <div class="slide"><img src="/imgs/um.webp" alt="Imagem 3" /></div>
-        <div class="slide"><img src="/imgs/dois.webp" alt="Imagem 3" /></div>
+        <div class="slide">
+          <img src="/imgs/um.webp" alt="Imagem 1" />
+        </div>
+        <div class="slide">
+          <img src="/imgs/dois.webp" alt="Imagem 2" />
+        </div>
+        <div class="slide">
+          <img src="/imgs/tres.webp" alt="Imagem 3" />
+        </div>
+        <div class="slide">
+          <img src="/imgs/um.webp" alt="Imagem 3" />
+        </div>
+        <div class="slide">
+          <img src="/imgs/dois.webp" alt="Imagem 3" />
+        </div>
       </div>
     </section>
 
+    <!-- Fim Scroll Vertical -->
+
+    <!-- Inicio Grid Roll -->
     <div class="grid" style="margin-top: 20px">
-       </div>
+      <div
+        class="mark"
+        style="
+          height: 50px;
+          background-color: #faf0eb;
+          position: absolute;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          overflow: hidden;
+          transform: rotateZ(-0.5deg);
+        "
+      >
+        <div
+          class="markelement"
+          style="display: flex; align-items: center; height: 100%"
+        >
+          <p>Design gráfico</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>Mídias Sociais</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>Comunicação Visual</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>aether</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>Design gráfico</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>Mídias Sociais</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>Comunicação Visual</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>aether</p>
+          <img src="/imgs/star.png" alt="" />
+
+          <p>Design gráfico</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>Mídias Sociais</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>Comunicação Visual</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>aether</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>Design gráfico</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>Mídias Sociais</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>Comunicação Visual</p>
+          <img src="/imgs/star.png" alt="" />
+          <p>aether</p>
+          <img src="/imgs/star.png" alt="" />
+        </div>
+      </div>
+      <div class="column scroll-column-mask">
+        <div class="column-scroller">
+          <div class="element"></div>
+          <div class="element"></div>
+          <div class="element"></div>
+          <div class="element"></div>
+
+          <div class="element"></div>
+          <div class="element"></div>
+          <div class="element"></div>
+          <div class="element"></div>
+        </div>
+      </div>
+
+      <div class="column scroll-column-mask">
+        <div class="column-scroller down">
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+        </div>
+      </div>
+
+      <div class="column scroll-column-mask">
+        <div class="column-scroller">
+          <div class="element"></div>
+          <div class="element"></div>
+          <div class="element"></div>
+          <div class="element"></div>
+          <div class="element"></div>
+          <div class="element"></div>
+          <div class="element"></div>
+          <div class="element"></div>
+        </div>
+      </div>
+
+      <div class="column scroll-column-mask">
+        <div class="column-scroller down">
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+        </div>
+      </div>
+      <div class="column scroll-column-mask">
+        <div class="column-scroller">
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+          <div class="element impar"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim Grid Roll -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+
     <script>
-      // Usamos o evento 'load' para garantir que os scripts com 'defer' já carregaram
-      window.addEventListener('load', function() {
-          VANTA.FOG({
-            el: "#vanta-bg",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.0,
-            minWidth: 200.0,
-            
-            // Suas Cores
-            highlightColor: 0xe7b6ff,
-            midtoneColor: 0xc3ceff,
-            lowlightColor: 0xd000ff,
-            baseColor: 0xffffff,
-            
-            blurFactor: 0.6,
-            speed: 2,
-            zoom: 0.6,
-            
-            // OTIMIZAÇÃO:
-            scale: 1.00,       // Resolução normal em PC
-            scaleMobile: 1.00  // Mude para 0.5 se travar no celular
-          });
+      VANTA.FOG({
+        el: "#vanta-bg", // ID da div que criamos lá em cima
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+
+        // AQUI SÃO AS CORES (Ajustei para lembrar sua marca)
+        highlightColor: 0xe7b6ff,
+        midtoneColor: 0xc3ceff,
+        lowlightColor: 0xd000ff,
+        baseColor: 0xffffff,
+
+        blurFactor: 0.6, // Quanto mais alto, mais difuso/suave
+        speed: 2, // Velocidade da movimentação
+        zoom: 0.6,
       });
     </script>
+    <script src="/js/header.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="/js/horizontal.js"></script>
   </body>
 </html>
